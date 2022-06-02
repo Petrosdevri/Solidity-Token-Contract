@@ -33,7 +33,7 @@ contract ERC20 is IERC20 {
     }    
     
 
-    function transferFrom( address sender, address recipient, uint amount) external returns (bool) {
+    function transferFrom(address sender, address recipient, uint amount) external returns (bool) {
         require(amount > 0, 'cannot transfer amounts equal to zero');
         require(sender != address(0), 'must not be a zero address');
         require(recipient != address(0), 'must not be a zero address');
