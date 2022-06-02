@@ -2,6 +2,12 @@
 pragma solidity ^0.8.13;
 
 
+/// NewToken Contract
+/// Name: New Token
+/// Symbol: NT 
+/// Decimals: 18
+/// Total Supply: 100,000,000,000 NT
+
 /** 
 * Token contract integrating features from the ERC20 standard, 
 * its IERC20 interface and the SafeMath library.
