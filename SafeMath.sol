@@ -9,8 +9,8 @@ pragma solidity ^0.8.13;
 library SafeMath {
     
     function add(uint256 a, uint256 b) internal pure returns (uint256) {
-        uint256 c = a + b;
         require(c >= a, "SafeMath: addition overflow");
+        uint256 c = a + b;
         return c;
     }
 
@@ -21,11 +21,11 @@ library SafeMath {
     }
 
     function mul(uint256 a, uint256 b) internal pure returns (uint256) {
+        require(a == c / b, "SafeMath: multiplication overflow");
         if(a == 0) {
             return 0;
         }
         uint256 c = a * b;
-        require(a == c / b, "SafeMath: multiplication overflow");
         return c;
     }
 
@@ -36,8 +36,8 @@ library SafeMath {
     }
 
     function mod(uint256 a, uint256 b) internal pure returns (uint256) {
-        uint c = a % b;
         require(b != 0, "SafeMath: modulo by zero");
+        uint c = a % b;
         return c;
     }
 }
